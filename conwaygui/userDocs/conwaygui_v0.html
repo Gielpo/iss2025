@@ -195,6 +195,16 @@ div.imagedesc{
 	width: 85%;
 	margin: auto;
 }
+
+div.detail{
+	background-color: #4be8f6;
+    border: 1.5px solid #d5f2ed;
+    padding: 15px;
+    margin: 10px;
+	border-radius: 25px;
+
+}
+
 </style>
     
  
@@ -247,6 +257,8 @@ div.imagedesc{
 <div class="remark">
 	Codice copiato direttamente nel progetto della GUI cosi il device puo essere modificato
 </div>
+
+
  
 <h2>Requirements</h2>
 
@@ -263,9 +275,69 @@ div.imagedesc{
  
 
 <h2>Problem analysis</h2>
+
 <div class="remark">
-	
+
+	User Stories Owner: 
+
+</br>
+</br>
+
+	L'owner si aspetta che una volta avviata l'applicazione, compaia a schermo una griglia per piter selezionare 
+	le celle, che rappresentano una cellula
+
+</br>
+</br>
+
+	Premendo su una cellula, deve essere possibile interagire con essa, cambiando il suo stato da viva a morta o viceversa
+
+</br>
+</br>
+
+	Premendo il tasto <b>START</b> il gioco si avvia, tramite il tasto <b>STOP</b> si blocca, e tramite il tasto <b>EXIT</b> si esce dall'applicazione
+
+</br>
+</br>
+
+ 	<div class="detail">
+
+		l'applicazione deve comunicare al server le celle scelte dall'owner e deve far si che avvenga la transizione da cellula viva a morta cambiandone di conseguenza il colore
+
+ 	</div>
+
 </div>
+
+
+<div class="remark">
+
+	User Stories Utente:
+
+</br>
+</br>
+
+	L'utente deve essere in grado di guardare la partita, ma senza poter interagire
+
+</br>
+</br>
+
+	Tutti gli utenti devono vedere la stessa partita
+
+</br>
+</br>
+
+	<div class="detail">
+
+			Si potrebbe nascondere all'utente i tasti e lasciare solo la visualizzazione della griglia
+
+		</br>
+		</br>
+
+			comuinicazione delle cellule da mostrare avviene tramite il server 
+	</div>
+	
+
+</div>
+	
 
 <h2>Test plans</h2> 
 
