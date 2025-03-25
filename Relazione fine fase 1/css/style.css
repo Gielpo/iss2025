@@ -23,9 +23,9 @@ html, body{
 
     background-color: rgb(195, 235, 246); 
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombra per un effetto 3D */
-    padding: 8px 15px; /* Spaziatura interna */
-    border: 2px solid black; /* Bordo blu */
-    display: inline-block; /* Adatta la dimensione al contenuto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    padding: 8px 15px; 
+    border: 2px solid black; 
+    display: inline-block; 
 
 }
