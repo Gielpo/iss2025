@@ -31,7 +31,8 @@ class A0 ( name: String, scope: CoroutineScope, isconfined: Boolean=false  ) : A
 		return { //this:ActionBasciFsm
 				state("s0") { //this:State
 					action { //it:State
-						CommUtils.outmagenta("Hello World")
+						 CommUtils.outgreen("$name | hello world from kotlin")  
+						CommUtils.outmagenta("$name | Hello World")
 						//genTimer( actor, state )
 					}
 					//After Lenzi Aug2002

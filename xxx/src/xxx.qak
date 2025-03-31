@@ -1,11 +1,13 @@
-System xxx 
+System xxx
 
-Context ctxxxx ip [host="localhost" port= 23]
+Context ctxxxx ip [ host="localhost" port= 8920]
 
 QActor a0 context ctxxxx {
 	
-	State s0 initial {
+	State s0 initial{
 		
-		println("Hello World") color magenta
+		[# CommUtils.outgreen("$name | hello world from kotlin") #]
+		println("$name | Hello World") color magenta
 	}
+	
 }
