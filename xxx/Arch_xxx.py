@@ -25,6 +25,4 @@ with Diagram('xxxArch', show=False, outformat='png', graph_attr=graphattr) as di
   with Cluster('env'):
      sys = Custom('','./qakicons/system.png')
 ### see https://renenyffenegger.ch/notes/tools/Graphviz/attributes/label/HTML-like/index
-     with Cluster('ctxxxx', graph_attr=nodeattr):
-          a0=Custom('a0','./qakicons/symActorWithobjSmall.png')
 diag

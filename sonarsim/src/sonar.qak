@@ -1,0 +1,71 @@
+System simulatesonar
+
+Event distanceChange : distance(D)
+
+Context ctxsimulate ip [host="localhost" port=8080]
+
+QActor simulate context ctxsimulate{
+
+[# 
+	var Dist=0
+#]	
+	
+	State s0 initial{
+		
+		println("simulate partito")
+		delay 2000
+	}
+	 Goto s1
+	
+	State s1{
+		
+		[# 
+			Dist = (10..100).random()
+		#]
+		
+		println("$name | distanza rilevata: $Dist")
+		emit distanceChange : distance($Dist)
+		delay 1000
+
+	}
+	
+	Goto s1
+}
+ 
+
+QActor printval context ctxsimulate {
+	
+[# 
+	var D=""
+#]
+	
+	State s0 initial{
+		
+		println("printval partito")
+	}
+	
+	Goto print
+	
+	State print{
+		
+		 
+	}
+	
+	Transition t0 
+	
+		whenEvent distanceChange -> handleevent
+		
+		
+	State handleevent {
+		
+		onMsg(distanceChange : distance(X)){
+			
+			[#  D = payloadArg(0) #]
+			println("$name | distanza : $D")
+			//printCurrentMessage color blue
+		}
+		
+	}
+	
+	Goto print
+}
